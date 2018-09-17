@@ -1,13 +1,14 @@
-function bubbleSort(array) {
-  let end = array.length;
-  let pointer = arr[0];
-
-  for(let i = 0; i < end; i++) {
-
+function bubbleSort(arr) {
+  // debugger;
+  for (let i = 0; i < arr.length - 1; i++) {
+    let first = arr[i];
+    let second = arr[i + 1];
+    if (arr[i] > arr[i + 1]) {
+      swap(i, i + 1, arr);
+    }
   }
-
+  return arr;
 }
-
 
 function swap(indexA, indexB, arr) {
   let first = arr[indexA];
@@ -18,3 +19,5 @@ function swap(indexA, indexB, arr) {
 
   return arr;
 }
+
+console.log(bubbleSort([2, 1, 3, 4]));
